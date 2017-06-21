@@ -61,6 +61,7 @@ class DemoView extends React.Component {
           className="qrcode"
           style={{
             float: 'right',
+            marginTop: '2px',
             marginLeft: `${this.props.containerWidth / 10}px`
           }}
         >
@@ -69,11 +70,7 @@ class DemoView extends React.Component {
             size={ this.props.containerWidth - 100 }
           />
 
-          <div style={{
-            marginTop: `${this.props.containerWidth / 10}px`,
-            background: 'gray'
-          }}>
-            adsf,<br/>asdf
+          <div className="info">
           </div>
         </div>
       </div>
