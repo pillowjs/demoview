@@ -4,8 +4,7 @@ var path = require('path');
 
 var config = {
   entry: {
-    demoview: path.resolve('src'),
-    home: path.resolve('./home.js')
+    home: path.resolve('./home')
   },
   output: {
     path: path.join(__dirname, 'build'),

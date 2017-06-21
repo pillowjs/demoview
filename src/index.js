@@ -9,6 +9,10 @@ const pkg = require('../package');
 const backgroundImage = '//pillowjs.github.io/demoview/assets/iphone.png';
 
 const noop = () => {};
+const getUrlParams = name => {
+  var results = new RegExp(`[\\?&]${name}=([^&#]*)`).exec(location.href);
+  return results ? results[1] : null;
+};
 
 class DemoView extends React.Component {
   constructor(props) {
@@ -42,7 +46,6 @@ class DemoView extends React.Component {
           <iframe
             src={ this.props.previewUrl }
             style={{
-              display: 'none',
               width: '100%',
               height: '100%',
               overflow: 'hidden'
@@ -104,11 +107,13 @@ class DemoView extends React.Component {
   }
 }
 
+const previewUrl = getUrlParams('previewUrl');
+
 DemoView.defaultProps = {
   containerWidth: 300,
   containerHeight: 627,
   prefixClassName: 'rc-demoview',
-  previewUrl: 'https://pillowjs.github.io/pillow'
+  previewUrl: previewUrl ? decodeURIComponent(previewUrl) : 'https://pillowjs.github.io/pillow'
 };
 
 module.exports = DemoView;
