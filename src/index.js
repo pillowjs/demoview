@@ -46,9 +46,13 @@ class DemoView extends React.Component {
           <iframe
             src={ this.props.previewUrl }
             style={{
-              width: '100%',
-              height: '100%',
-              overflow: 'hidden'
+              width: '252px',
+              height: '448px',
+              overflow: 'scroll',
+              border: 'none',
+              marginTop: '89px',
+              marginLeft: '1px',
+              borderRadius: '1px'
             }}
             scrolling="no"
           ></iframe>
