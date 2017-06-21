@@ -1,4 +1,3 @@
-/* global define */
 'use strict';
 
 const React = require('react');
@@ -84,7 +83,6 @@ class DemoView extends React.Component {
       flat: true
     };
   }
-
 
   render() {
     return (

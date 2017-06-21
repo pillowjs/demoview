@@ -9,5 +9,6 @@ coverage/
 *.sw*
 *.un~
 src/
-examples/
 build/
+assets/
+webpack.config.js

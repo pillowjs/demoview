@@ -2602,7 +2602,7 @@ module.exports = ReactPropTypesSecret;
 
 module.exports = {
 	"name": "demoview",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "pillow demo preview",
 	"repository": {
 		"type": "git",
@@ -2617,9 +2617,9 @@ module.exports = {
 		"lint"
 	],
 	"scripts": {
-		"lint": "eslint ./src ./examples",
+		"lint": "eslint ./src",
 		"doc": "rm -rf ./docs/ && jsdoc -c ./jsdoc.json",
-		"build": "webpack",
+		"build": "webpack && babel src/ --out-dir dist/",
 		"server": "startserver -p 8082 -s -m",
 		"prepublish": "npm run build"
 	},
@@ -2628,7 +2628,8 @@ module.exports = {
 		"babel": "~5.8.23",
 		"babel-core": "^5.x",
 		"babel-loader": "^5.x",
-		"eslint": "^4.0.0",
+		"eslint": "^3.15.0",
+		"eslint-plugin-react": "^6.1.2",
 		"forkmeon.github.io": "^1.1.4",
 		"jsdoc": "3.4.0",
 		"json-loader": "^0.5.2",
@@ -2848,7 +2849,6 @@ module.exports = QRCode;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* global define */
 
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
