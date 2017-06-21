@@ -6252,6 +6252,8 @@ var ForkmeonComponent = __webpack_require__(53);
 
 var pkg = __webpack_require__(52);
 
+var backgroundImage = '//pillowjs.github.io/demoview/assets/iphone.png';
+
 var noop = function noop() {};
 
 var DemoView = (function (_React$Component) {
@@ -6287,12 +6289,15 @@ var DemoView = (function (_React$Component) {
               width: this.props.containerWidth,
               height: this.props.containerHeight,
               overflow: 'hidden',
-              float: 'left'
+              float: 'left',
+              backgroundImage: 'url(' + backgroundImage + ')',
+              backgroundSize: '100%'
             }
           },
           React.createElement('iframe', {
             src: this.props.previewUrl,
             style: {
+              display: 'none',
               width: '100%',
               height: '100%',
               overflow: 'hidden'
@@ -6365,8 +6370,8 @@ var DemoView = (function (_React$Component) {
 })(React.Component);
 
 DemoView.defaultProps = {
-  containerWidth: 320,
-  containerHeight: 458,
+  containerWidth: 300,
+  containerHeight: 627,
   prefixClassName: 'rc-demoview',
   previewUrl: 'https://pillowjs.github.io/pillow'
 };

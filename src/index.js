@@ -7,6 +7,8 @@ const ForkmeonComponent = require('forkmeon.github.io');
 
 const pkg = require('../package');
 
+const backgroundImage = '//pillowjs.github.io/demoview/assets/iphone.png';
+
 const noop = () => {};
 
 class DemoView extends React.Component {
@@ -33,12 +35,15 @@ class DemoView extends React.Component {
             width: this.props.containerWidth,
             height: this.props.containerHeight,
             overflow: 'hidden',
-            float: 'left'
+            float: 'left',
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: '100%'
           }}
         >
           <iframe
             src={ this.props.previewUrl }
             style={{
+              display: 'none',
               width: '100%',
               height: '100%',
               overflow: 'hidden'
@@ -102,8 +107,8 @@ class DemoView extends React.Component {
 }
 
 DemoView.defaultProps = {
-  containerWidth: 320,
-  containerHeight: 458,
+  containerWidth: 300,
+  containerHeight: 627,
   prefixClassName: 'rc-demoview',
   previewUrl: 'https://pillowjs.github.io/pillow'
 };
