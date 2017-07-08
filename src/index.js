@@ -51,8 +51,8 @@ class DemoView extends React.Component {
               overflow: 'scroll',
               border: 'none',
               marginTop: '178px',
-              marginLeft: '4px',
-              borderRadius: '1px',
+              marginLeft: '6px',
+              borderRadius: '2px',
               zoom: '0.5'
             }}
             scrolling="no"
