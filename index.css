@@ -1,15 +1,18 @@
 html {
   font: 16px/1.6 "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
 h1 {
   text-align: center;
 }
+
 a {
   color: #ee6723;
   text-decoration: none;
   -webkit-transition: color .1s;
   transition: color .1s;
 }
+
 a:hover,
 a:active {
   color: #ce5010;
